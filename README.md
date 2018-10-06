@@ -21,6 +21,17 @@ Date: yyyy-mm-dd
 
 it will also be updated to the current date.
 
+## Pre-requists 
+
+The tool is implemented in `bash`. It assumes you have the following command tools available:
+
+- `git`
+- `grep`
+- `sed`
+- `date`
+
+They should come with a standard UNIX(-like) system anyways. Just listing them out here in case.
+
 ## Installation
 
 ```
