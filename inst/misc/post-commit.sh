@@ -4,7 +4,7 @@
 # will commit changes made to package DESCRIPTION by the pre-commit hook
 #
 # To use this script, copy it to the .git/hooks directory of your
-# local repository.
+# local repository to filename `post-commit`, and make it executable.
 #
 ROOT_DIR=`git rev-parse --show-toplevel`
 # Only commit DESCRIPTION file when it is not staged (due to changes by pre-commit hook)

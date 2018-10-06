@@ -78,4 +78,4 @@ Version: 0.1.0.0
 
 The next time you commit you should not see the warning message, and the internal version number should be updated. 
 
-[githooks] https://githooks.com
+[githooks]: https://githooks.com

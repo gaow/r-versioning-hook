@@ -4,7 +4,7 @@
 # will update the 4th digit of package version by revision number.
 #
 # To use this script, copy it to the .git/hooks directory of your
-# local repository.
+# local repository to filename `pre-commit`, and make it executable.
 #
 ROOT_DIR=`git rev-parse --show-toplevel`
 MSG="[WARNING] Auto-versioning disabled because string 'Version: x.y.z.r' cannot be found in DESCRIPTION file."
