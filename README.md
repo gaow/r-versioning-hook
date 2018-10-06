@@ -25,7 +25,7 @@ it will also be updated to the current date.
 
 The tool is implemented in `bash`. It assumes you have the following command tools available:
 
-- `bash`
+- `/bin/bash`
 - `git`
 - `wc`
 - `grep`
