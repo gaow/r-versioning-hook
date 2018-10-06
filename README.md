@@ -40,7 +40,7 @@ Version string bumped to revision 12 on 2018-10-06
 [master d1ac43d] Update README.md
  Date: Sat Oct 6 05:00:40 2018 -0500
  2 files changed, 12 insertions(+), 2 deletions(-)
-Version bump is amended to current commit
+Amend current commit to incorporate version bump
 [master 8b16a98] Update README.md
  1 file changed, 11 insertions(+), 1 deletion(-)
 ```
