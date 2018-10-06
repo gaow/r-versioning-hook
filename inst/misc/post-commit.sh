@@ -11,7 +11,7 @@ ROOT_DIR=`git rev-parse --show-toplevel`
 if [[ -z `git diff HEAD` ]] || [[ ! -f $ROOT_DIR/DESCRIPTION ]] || [[ -z `git diff $ROOT_DIR/DESCRIPTION` ]]; then
     exit 0
 else
-    echo "Amend current commit to incorporate version bump"
     git add $ROOT_DIR/DESCRIPTION
     git commit --amend -C HEAD --no-verify
+    echo "Amend current commit to incorporate version bump"
 fi
