@@ -30,6 +30,7 @@ The tool is implemented in `bash`. It assumes you have the following command too
 - `wc`
 - `grep`
 - `sed`
+- `printf`
 - `date`
 
 They should come with a standard UNIX(-like) system anyways. Just listing them out here in case.
@@ -49,7 +50,7 @@ Suppose now you have changed something in the repository. You can simply stage &
 
 ```
 $ git commit -am "Update README.md"
-Version string bumped to revision 12 on 2018-10-06
+Version string bumped to revision 0012 on 2018-10-06
 [master d1ac43d] Update README.md
  Date: Sat Oct 6 05:00:40 2018 -0500
  2 files changed, 12 insertions(+), 2 deletions(-)
@@ -57,6 +58,11 @@ Amend current commit to incorporate version bump
 [master 8b16a98] Update README.md
  1 file changed, 11 insertions(+), 1 deletion(-)
 ```
+
+## Advanced usage
+
+You can modify the scripts to for example automatically update documentation or run unit-tests
+for commits to `master`. See [here][susie-example] for an example.
 
 ## Make public releases
 
@@ -92,3 +98,4 @@ Version: 0.1.0.0
 The next time you commit you should not see the warning message, and the internal version number should be updated. 
 
 [githooks]: https://githooks.com
+[susie-example]: https://github.com/stephenslab/susieR/blob/e3eb951fc29a208f6fe21cf712d3426461b69a45/inst/misc/pre-commit.sh#L26
