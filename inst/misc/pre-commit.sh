@@ -13,8 +13,8 @@ SED_REGEX='^Version: \([0-9]*\.[0-9]*\.[0-9]*\)\.[0-9]*'
 # `git diff HEAD` shows both staged and unstaged changes
 if [[ -z `git diff HEAD` ]] || [[ ! -f $ROOT_DIR/DESCRIPTION ]]; then
     exit 0
-elif [[ -z `grep -P "$GREP_REGEX" $ROOT_DIR/DESCRIPTION` ]]; then
-    echo -e "\e[1;31m$MSG\e[0m"
+elif [[ -z `grep "$GREP_REGEX" $ROOT_DIR/DESCRIPTION` ]]; then
+    echo "$MSG"
     exit 0
 else
     REV_ID=`git log --oneline | wc -l`
@@ -23,4 +23,5 @@ else
     echo "Version string bumped to revision $REV_ID on $DATE"
     sed -i "s/$SED_REGEX/Version: \1.$REV_ID/" $ROOT_DIR/DESCRIPTION
     sed -i "s/^Date: .*/Date: $DATE/" $ROOT_DIR/DESCRIPTION
+    exit 0
 fi
